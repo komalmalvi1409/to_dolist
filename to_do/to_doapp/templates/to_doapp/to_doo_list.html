@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for object in object_list %}
+
+    <!-- Display Objects -->
+
+    <li>{{ object.title }}</li>
+    <li>{{ object.description }}</li>
+    <li>{{object.category}}</li>
+    <li>{{object.duedate}}</li>
+    <a href="/to_doapp/{{object.id}}/update">Update Job</a>
+
+   <a href="/to_doapp/{{object.id}}/delete">Delete Job</a>
+    {% endfor %}
+</body>
+</html>
